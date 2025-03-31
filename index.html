@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joalheria Brilho Eterno</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            transition: background 0.5s, color 0.5s;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        .menu li {
+            margin: 0 15px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .menu a:hover {
+            color: #f46161;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        .jewel {
+            text-align: center;
+            margin: 20px;
+        }
+        .jewel img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .botao-carrinho {
+            background-color: #D3B897; 
+            color: #333; 
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        .botao-carrinho:hover {
+            background-color: #BFA383; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <button id="toggle-dark-mode">🌙</button>
+        </nav>
+    </header>
+    <main>
+        <h1 id="titulo">Bem-vindo à Joalheria Brilho Eterno</h1>
+        <p>Na Joalheria Brilho Eterno, você encontra vários tipos de acessórios, combinando tradição e inovação em peças elegantes e refinadas.</p>
+        
+        <section class="grid-container">
+            <div class="jewel">
+                <img src="OIP.jpeg" alt="Pulseira 14k">
+                <h2>Conjunto de Pulseira 14k</h2>
+                <p class="preco">$15,000.00</p>
+                <button class="botao-carrinho">Adicionar ao Carrinho</button>
+            </div>
+            <div class="jewel">
+                <img src="OIl.jpeg" alt="Brinco 14k">
+                <h2>Brinco de 14k</h2>
+                <p class="preco">$380.00</p>
+                <button class="botao-carrinho">Adicionar ao Carrinho</button>
+            </div>
+            <div class="jewel">
+                <img src="Brincos de ouro.jpeg" alt="Brincos de ouro">
+                <h2>Brincos de ouro</h2>
+                <p class="preco">$380.00</p>
+                <button class="botao-carrinho">Adicionar ao Carrinho</button>
+            </div>
+            <div class="jewel">
+                <img src="colar.jpeg" alt="colar">
+                <h2>Colar de Diamantes</h2>
+                <p class="preco">$10,800.00</p>
+                <button class="botao-carrinho">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="jewel">
+                <img src="conjunto de brincos.jpeg" alt="conjunto de brincos">
+                <h2>Brincos de  16k</h2>
+                <p class="preco">$18,000.00</p>
+                <button class="botao-carrinho">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="jewel">
+        <img src="Colar brilho eterno.jpeg" alt="Colar brilho eterno">
+        <h2>Colar Brilho Eterno de 16k</h2>
+        <p class="preco">$18,000.00</p>
+        <button class="botao-carrinho">Adicionar ao Carrinho</button>
+</div>
+       
+<div class="jewel">
+    <img src="OIP (2).jpeg" alt="OIP">
+    <h2>Colar de  16k</h2>
+    <p class="preco">$18,000.00</p>
+    <button class="botao-carrinho">Adicionar ao Carrinho</button>
+</div>
+
+<div class="jewel">
+    <img src="OIP (3).jpeg" alt="conjunto de brincos">
+    <h2>Colar Feminino de  13k</h2>
+    <p class="preco">$18,000.00</p>
+    <button class="botao-carrinho">Adicionar ao Carrinho</button>
+</div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Todos os direitos reservados.</p> 
+    </footer>
+    
+    <script>
+        document.getElementById('toggle-dark-mode').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            let mode = document.body.classList.
+    
+    contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', mode);
+        });
+
+      
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+</body>
+</html>
