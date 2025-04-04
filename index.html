@@ -62,10 +62,16 @@
             background-color: #222;
             color: white;
         }
+        
         .jewel {
             text-align: center;
             margin: 20px;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: space-between;
         }
+        
         .jewel img {
             width: 200px;
             height: auto;
@@ -85,6 +91,21 @@
         }
         .botao-carrinho:hover {
             background-color: #BFA383; 
+
+            .animate{
+		width: 0%;
+		text-wrap: nowrap;
+		overflow: hidden;
+		animation: 
+			escrever 5s steps(70) .5s both;
+		
+	}@keyframes escrever{
+		
+		from{width: 0%;}
+		to{width: 100%}
+	}
+
+            
         }
     </style>
 </head>
